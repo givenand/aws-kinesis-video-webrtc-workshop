@@ -73,50 +73,10 @@ Filesystem      Size  Used Avail Use% Mounted on
 
 -----
 
-## Installing the libraries
-
 At the bottom of the screen, you can see `Admin:~/environment $`, which is the Cloud9 (EC2) terminal.
 
 
 ![Cloud9 Setup](/images/1-1-b-terminal.ja.png)
 
-All of the following commands must be executed in a Cloud 9 terminal.
 
-Execute the following commands to update the package list and install the libraries needed to build the SDK.
-
-```bash
-sudo apt update
-sudo apt install -y cmake gstreamer1.0-plugins-bad gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-tools libgstreamer-plugins-base1.0-dev
-```
-
-That's all. You set up a Cloud9 environment. Next, we will proceed to install the SDK.
-
-1. Open the AWS Cloud9 console by clicking the button to the right.  {{% button href="https://console.aws.amazon.com/cloud9/home" %}}AWS Cloud9 console{{% /button %}}
-2. Select the Create Environment button
-   1. Name the environment KVSWebRTCWorkshop
-      1. Create a new EC2 instance for environment (direct access)
-      2. Instance Type
-         1. t2.micro or t3.small
-      3. Platform
-         1. Ubuntu Server 18.04 LTS
-   2. Create the environment and wait a couple of minutes for the creation to complete
-   3. Increase the volume size to 20GB
-   4. 
-
-
-Setup Cloud9
-Setup access key id and secret access key
-Clone SDK
-Build Samples
-Run Sample
-
-
-Enable P2P
-IoT Credential Provider
-
-
-
-
-
-
-
+You just set up a Cloud9 environment. Next, we will build the sample applications.
