@@ -1,8 +1,8 @@
 +++
-title = "Sample applications"
+title = "Getting Started"
 chapter = true
-weight = 10
-pre = "<b>2. </b>"
+weight = 1
+pre = "<b>1. </b>"
 +++
 
 
@@ -14,6 +14,3 @@ Services used in this workshop will result in charges to your AWS bill.  Please 
 
 
 In this workshop you will learn about Amazon Kinesis Video Streams WebRTC features.  You will learn how to compile the WebRTC C SDK samples, and modify the samples to integrate with AWS IoT.
-
-This workshop utilizes AWS Cloud9 to 
-
