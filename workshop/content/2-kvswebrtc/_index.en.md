@@ -1,5 +1,5 @@
 +++
-title = "Sample applications"
+title = "WebRTC C SDK Samples"
 chapter = true
 weight = 2
 pre = "<b>2. </b>"
