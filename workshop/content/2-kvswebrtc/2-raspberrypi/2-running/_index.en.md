@@ -5,12 +5,12 @@ weight = 2
 pre = "<b>2. </b>"
 +++
 
-## Export environment variables
+## Set the required Environment Variables
 
 Export the environment variables obtained in the Getting Started section.
 ```
-export AWS_ACCESS_KEY_ID= <AWS account access key>
-export AWS_SECRET_ACCESS_KEY= <AWS account secret key>
+export AWS_ACCESS_KEY_ID=<AWS account access key>
+export AWS_SECRET_ACCESS_KEY=<AWS account secret key>
 ```
 
 Optionally, set AWS_SESSION_TOKEN if integrating with temporary token
@@ -18,9 +18,9 @@ Optionally, set AWS_SESSION_TOKEN if integrating with temporary token
 export AWS_SESSION_TOKEN=<session token>
 ```
 
-Region is optional, if not being set, then us-west-2 will be used as default region.
+Region is optional, and if not being set will default to the us-west-2 region.
 ```
-export AWS_DEFAULT_REGION= <AWS region>
+export AWS_DEFAULT_REGION=<AWS region>
 ```
 
 ## Run the sample application

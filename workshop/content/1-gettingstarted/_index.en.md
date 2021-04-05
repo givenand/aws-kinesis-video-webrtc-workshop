@@ -21,4 +21,4 @@ This workshop makes use of AWS Cloud9 to build and run certain labs, as well as 
 
 You will also need an AWS account with permissions for Kinesis Video Streams, Cloud9, and access to the AWS Management Console. You will also need permissions to create security credentials that permit programmatic access to AWS to run the sample applications. These are generally referred to as an Access Key ID and Secret Access Key pair.
 
-There are optional labs that you can take advantage of if you have access to an Amazon Echo Show capable device, and if you have access to your physical devices such as a Raspberry Pi v4. 
+There are optional labs that you can take advantage of if you have access to an Amazon Echo Show capable device, and if you have access to your physical devices such as a Raspberry Pi 4. 
