@@ -6,4 +6,4 @@ chapter = true
 pre = "<b>4. </b>"
 +++
 
-In this section of the workshop, you will learn how to integrate your live video streams from your devices into your web or mobile applications using AWS Amplify. 
+`TODO` In this section of the workshop, you will learn how to integrate your live video streams from your devices into your web or mobile applications using AWS Amplify. 

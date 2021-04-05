@@ -1,6 +1,8 @@
 +++
 title = "Obtaining credentials"
-weight = 13
+weight = 2
+chapter = true
+pre = "<b>2. </b>"
 +++
 
 
@@ -8,7 +10,7 @@ weight = 13
 ## Obtaining AWS Credentials
 
 {{% notice "note" %}}
-Credentials are required for the sample applications to communicate with the KVS Service.  For the purpose of this workshop, we will be using static credentials.  However, a real solution would utilize a more secure and scalable method.  Fortunately, AWS IoT offers a solution using X.509 device certificates. 
+Credentials are required for the sample applications to communicate with the KVS Service.  For the purpose of this workshop, we will be using static credentials.  However, a real solution would utilize a more secure and scalable method.  Fortunately, AWS IoT offers a solution using X.509 device certificates.
 [How to Eliminate the Need for Hardcoded AWS Credentials in Devices by Using the AWS IoT Credentials Provider](https://aws.amazon.com/jp/blogs/security/how-to-eliminate-the-need-for-hardcoded-aws-credentials-in-devices-by-using-the-aws-iot-credentials-provider/)
 {{% /notice %}}
 

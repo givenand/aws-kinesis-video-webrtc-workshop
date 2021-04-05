@@ -6,4 +6,6 @@ chapter = true
 pre = "<b>5. </b>"
 +++
 
-In this section of the workshop, you will learn how to incorporate your Amazon Kinesis Video Streams based WebRTC interaction with an Amazon Alexa based device.
+
+
+`TODO` In this section of the workshop, you will learn how to incorporate your Amazon Kinesis Video Streams based WebRTC interaction with an Amazon Alexa based device.

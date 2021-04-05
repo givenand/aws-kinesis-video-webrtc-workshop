@@ -1,6 +1,8 @@
 +++
 title = "Setup AWS Cloud9"
-weight = 12
+weight = 1
+chapter = true 
+pre = "<b>1. </b>"
 +++
 {{% notice note %}}
 Make sure you select the desired AWS region when creating your Cloud9 environment

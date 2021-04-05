@@ -1,7 +1,7 @@
 +++
 title = "Running Sample Applications"
 chapter = true
-weight = 11
+weight = 2
 pre = "<b>2. </b>"
 +++
 
@@ -47,5 +47,3 @@ Expand the section titled **Media playback viewer**
 Click on the Play icon to start a streaming session.  You can also expand the **Viewer statistics** section to view details about the media stream.
 
 ![KVSMediaPlaying](/images/StreamingVideoWithStats.png)
-
-
