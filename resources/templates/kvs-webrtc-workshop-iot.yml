@@ -1,0 +1,70 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: |
+  Creates the IAM Roles and IoT Policy required for KVS Devices to use IoT Core's Credential Provider
+Parameters:
+  RoleAliasName:
+    Description: Name of the IoT Role Alias a new device is allowed to assume
+    Type: String
+    Default: KvsWebRtcDeviceIoTRoleAlias
+
+Resources:
+  KvsWebRtcDeviceCertificateBasedIAMRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+        - Effect: Allow
+          Principal:
+            Service:
+              - credentials.iot.amazonaws.com
+          Action:
+            - "sts:AssumeRole"
+
+  KvsWebRtcDeviceIAMPolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: KvsWebRtcDeviceIAMPolicy
+      Roles:
+        - !Ref KvsWebRtcDeviceCertificateBasedIAMRole
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+        - Effect: Allow
+          Action:
+          - kinesisvideo:DescribeStream
+          - kinesisvideo:PutMedia
+          - kinesisvideo:TagStream
+          - kinesisvideo:GetDataEndpoint
+          Resource: !Sub 'arn:aws:kinesisvideo:${AWS::Region}:${AWS::AccountId}:stream/${!credentials-iot:ThingName}/*'
+        - Effect: Allow
+          Action:
+          - kinesisvideo:DescribeSignalingChannel
+          - kinesisvideo:CreateSignalingChannel
+          - kinesisvideo:GetSignalingChannelEndpoint
+          - kinesisvideo:GetIceServerConfig
+          - kinesisvideo:ConnectAsMaster
+          Resource: !Sub 'arn:aws:kinesisvideo:${AWS::Region}:${AWS::AccountId}:channel/${!credentials-iot:ThingName}/*'
+
+  KvsWebRTCDevicePolicy:
+    Type: AWS::IoT::Policy
+    Properties:
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+        - Effect: Allow
+          Action:
+          - iot:Connect
+          Resource: "*"
+        - Effect: Allow
+          Action:
+          - iot:AssumeRoleWithCertificate
+          Resource: !Sub 'arn:aws:iot:${AWS::Region}:${AWS::AccountId}:rolealias/${RoleAliasName}'
+
+Outputs:
+  IAMRoleArn:
+    Description: IoT IAM Role that KVS Devices will be allowed to Assume
+    Value: !GetAtt KvsWebRtcDeviceCertificateBasedIAMRole.Arn
+  KvsWebRTCDevicePolicy:
+    Description: IoT Policy that KVS Camera devices will be assigned
+    Value: !Ref KvsWebRTCDevicePolicy
