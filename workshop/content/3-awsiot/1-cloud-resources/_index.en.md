@@ -7,7 +7,7 @@ pre = "<b>1. </b>"
 +++
 
 {{% notice note %}}
-For production deployments, there are a number of device provisioning strategies including automated device provisioning options which are out of scope for this workshop. The [AWS IoT Device Management](https://iot-device-management.workshop.aws/en/) provides a more holistic overview of these approaches and how to use the various features in AWS IoT Core to automate device provisioning.
+For production deployments, there are a number of device provisioning strategies including automated device provisioning options which are out of scope for this workshop. The [AWS IoT Device Management Workshop](https://iot-device-management.workshop.aws/en/) provides a more holistic overview of these approaches and how to use the various features in AWS IoT Core to automate device provisioning.
 {{% /notice %}}
 
 The following steps are meant to allow you to provision a single KVS WebRTC device in AWS IoT Core.

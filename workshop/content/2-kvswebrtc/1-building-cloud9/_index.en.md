@@ -1,15 +1,17 @@
 +++
-title = "Building Sample Applications"
+title = "Using AWS Cloud9"
 chapter = true
 weight = 1
 pre = "<b>1. </b>"
 +++
 
+In this part of the workshop, you will use the the AWS Cloud9 instance you setup in the Getting Started portion of this workshop to build and run the KVS WebRTC sample applications. While there will not be a camera attached to your Cloud9 instance, the sample application was designed to generate a mock video stream, so you will still be able to view that video stream and learn how to build your WebRTC based applications using the C SDK. 
 
+![Cloud9 Overview](/images/Cloud9Overview.png)
+
+# Build the Sample Applications
 
 ## Installing the library dependencies
-
-
 
 Execute the following commands to update the package list and install the libraries needed to build the SDK and sample applications.
 
