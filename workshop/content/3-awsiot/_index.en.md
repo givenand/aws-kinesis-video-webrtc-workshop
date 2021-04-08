@@ -6,8 +6,6 @@ chapter = true
 pre = "<b>3. </b>"
 +++
 
-`TODO` standardize on the `kvsWebrtcClientMasterGstSample` across all instructions
-
 `TODO` - discussion about why using the credentials provider endpoint is encouraged, what other benefits that using AWS IoT to manage your devices provides, etc
 
 In this section of the workshop, you will learn how to make use of AWS IoT services in order to securely provision your devices using X.509 Certificates instead of using hard-coded AWS Access Key Pairs. You will also learn how to take advantage of other important aspects of integrating your devices with AWS IoT services, such as Device Management and Monitoring capabilities.

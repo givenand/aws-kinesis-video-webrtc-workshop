@@ -6,11 +6,11 @@ chapter = true
 pre = "<b>2. </b>"
 +++
 
-`TODO` add high-level description of what is being done in these steps
+Next, you will need to update the SDK Sample application to allow it to use the AWS IoT Core Credential Provider service instead of using AWS key pairs. This will allow your KVS WebRTC device to use X.509 certificates to securely access AWS services by way of AWS IoT Core.
 
-## Modify sample applications as follows
+In the following steps, you will change the sample application to allow it to consume all of the necessary configuration via environment variables, and to make use of the `createLwsIotCredentialProvider` instead of the default `createStaticCredentialProvider`.
 
-Next, you will need to update the SDK Sample application to allow it to use the AWS IoT Core Credential Provider service instead of using AWS key pairs.
+## Modify the Sample Application
 
 Use your preferred text editor to modify `samples/Common.c`. For each block of code given below, search for and replace the code blocks with the provided code.
 

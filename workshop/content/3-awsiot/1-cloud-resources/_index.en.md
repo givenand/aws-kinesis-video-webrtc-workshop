@@ -6,9 +6,20 @@ chapter = true
 pre = "<b>1. </b>"
 +++
 
-`TODO` add high-level description of what we are creating here, and explain why 
+{{% notice note %}}
+For production deployments, there are a number of device provisioning strategies including automated device provisioning options which are out of scope for this workshop. The [AWS IoT Device Management](https://iot-device-management.workshop.aws/en/) provides a more holistic overview of these approaches and how to use the various features in AWS IoT Core to automate device provisioning.
+{{% /notice %}}
+
+The following steps are meant to allow you to provision a single KVS WebRTC device in AWS IoT Core.
+
+
+`TODO` - it looks like someone has solved this already. See https://iot-device-management.workshop.aws/en/launch-workshop-resources-with-cloudformation/launch-cloudformation-stack.html
+
+{{%attachments title="Workshop Resources" pattern=".*(yml)"/%}}
 
 ## Create AWS IAM Role
+
+`TODO` - this template exists under resources/templates/kvs-webrtc-workshop-iot.yml. Is that resource available to download directly to workshop users?
 
 ```
 export AWS_DEFAULT_REGION=us-east-1
@@ -50,7 +61,11 @@ aws iot create-thing \
 aws iot add-thing-to-thing-group \
   --thing-group-name $THING_GROUP_NAME \
   --thing-name $THING_NAME
+```
 
+## Create Thing Certificates
+
+```
 curl --silent 'https://www.amazontrust.com/repository/SFSRootCAG2.pem' \
   --output ./root-CA.crt
 
@@ -73,12 +88,9 @@ aws iot attach-thing-principal \
   --principal $CERTIFICATE_ARN
 ```
 
-## Package configs, send to device
+## Generate Run Script
 
-Retrieve IoT Credential Provider endpoint
-Zip configs from Cloud9 instance and certs, send to "device"
-
-First, we will generate a convenience script that will be used to run the `kvsWebrtcClientMasterGstSample` on your target device. This includes all of the required environment variables that the sample depends on when connecting to the Credentials Provider service from AWS IoT Core.
+The following will generate a convenience script that will be used to run the `kvsWebrtcClientMasterGstSample`. This includes all of the required environment variables that the sample depends on when connecting to the Credentials Provider service from AWS IoT Core. Note that this script also fetches necessary configurations such as your IoT Core Credential Provider endpoint.
 
 ```
 cat > run-kvs-webrtc.sh <<EOF
@@ -96,12 +108,27 @@ $HOME/amazon-kinesis-video-streams-webrtc-sdk-c/build/kvsWebrtcClientMasterGstSa
 EOF
 ```
 
-Next you will create a zip file with all of the required artifacts to provision your KVS WebRTC device as an IoT thing:
+## (Optional) Package Configs and Send to Device
+
+{{% notice note %}}
+If you are running through this workshop entirely on Cloud9, then you can ignore this and move on to the next step.
+{{% /notice %}}
+
+
+If working with an actual device for this portion of the workshop, you will want to create an artifact that you can use to send all of this configuration to your device.
+
+The following command will create a zip file with all of the required artifacts to provision your KVS WebRTC device as an IoT thing:
 ```
-zip kvswebrtcdevice.zip device.cert.pem device.private.key device.public.key root-CA.crt run-kvs-webrtc.sh
+zip kvswebrtcdevice.zip \
+  device.cert.pem \
+  device.private.key \
+  device.public.key \
+  root-CA.crt \
+  run-kvs-webrtc.sh
 ```
 
-If working with an actual device for this lab, you will send this zip file to your device. If you are running through this workshop entirely on Cloud9, then you can ignore this step.
+`TODO` - screenshot for how to download this from Cloud9
+
 
 For example, you could use the `scp` utility to copy the zip file from your local machine to a Raspberry Pi:
 ```
