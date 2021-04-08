@@ -2,12 +2,11 @@
 title = "Using a Raspberry Pi 4"
 chapter = true
 weight = 2
-pre = "<b>2. </b>"
 +++
 
 The following steps assume that you have successfully installed the latest version of the Raspbian OS, have connected your Raspberry Pi to a network that is available to you, and that you are able to remotely access your Raspberry Pi either via SSH or VNC.
 
-The following diagram illustrates how you will interact with your device as well as with AWS Cloud resources. 
+The following diagram illustrates how you will interact with your device as well as with AWS Cloud resources.
 ![Raspberry Pi Overview](/images/RaspberryPiOverview.png)
 
 ## Hardware BOM

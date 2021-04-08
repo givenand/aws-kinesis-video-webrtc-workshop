@@ -3,7 +3,6 @@ title = "Cloud Resources"
 date = 2021-03-30T08:47:41-04:00
 weight = 1
 chapter = true
-pre = "<b>1. </b>"
 +++
 
 {{% notice note %}}

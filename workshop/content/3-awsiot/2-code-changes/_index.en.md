@@ -3,7 +3,6 @@ title = "Code Changes"
 date = 2021-03-30T08:47:41-04:00
 weight = 2
 chapter = true
-pre = "<b>2. </b>"
 +++
 
 Next, you will need to update the SDK Sample application to allow it to use the AWS IoT Core Credential Provider service instead of using AWS key pairs. This will allow your KVS WebRTC device to use X.509 certificates to securely access AWS services by way of AWS IoT Core.

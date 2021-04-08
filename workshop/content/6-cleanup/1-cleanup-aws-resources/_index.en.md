@@ -3,7 +3,6 @@ title = "Cleanup AWS Resources"
 date = 2021-03-30T08:47:41-04:00
 weight = 1
 chapter = true
-pre = "<b>1. </b>"
 +++
 
 After you have completed this portion of the workshop, we recommend that you clean up all of the resources generated. The following commands, executed in order, will delete them all.

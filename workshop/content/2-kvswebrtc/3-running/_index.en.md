@@ -2,10 +2,9 @@
 title = "Running Sample Applications"
 chapter = true
 weight = 3
-pre = "<b>3. </b>"
 +++
 
-The steps for running the sample application are the same regardless of where you are running them. If you are running the sample applications on Cloud9, you will follow the below instructions by executing the given commands on the Cloud9 console. If you are using a physical device such as a Raspberry Pi, then you will execute the given commands on the Raspberry Pi. 
+The steps for running the sample application are the same regardless of where you are running them. If you are running the sample applications on Cloud9, you will follow the below instructions by executing the given commands on the Cloud9 console. If you are using a physical device such as a Raspberry Pi, then you will execute the given commands on the Raspberry Pi.
 
 ## Set the required Environment Variables
 
