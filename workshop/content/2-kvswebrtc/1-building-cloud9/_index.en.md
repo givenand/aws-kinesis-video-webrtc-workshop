@@ -1,5 +1,5 @@
 +++
-title = "Using AWS Cloud9"
+title = "Using AWS Cloud9 as a WebRTC Producer"
 chapter = true
 weight = 1
 +++
@@ -42,3 +42,13 @@ Build the library and sample applications:
 ```
 make
 ```
+
+Setup gstreamer on your Cloud9 Instance
+
+```
+sudo apt-get install -y openjdk-8-jdk
+sudo apt-get install -y default-jdk
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+```
+
+The platform is ready to stream a sample video from your Cloud9 instance.  If you want to setup other producers click [Next](/en/2-kvswebrtc/2-building-raspberrypi.html), otherwise go to [Running Cloud9 + Pi Applications](/en/2-kvswebrtc/4-running.html)

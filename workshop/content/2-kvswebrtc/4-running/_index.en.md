@@ -1,5 +1,5 @@
 +++
-title = "Running Sample Applications"
+title = "Running Cloud 9 + Pi Applications"
 chapter = true
 weight = 3
 +++
@@ -8,7 +8,7 @@ The steps for running the sample application are the same regardless of where yo
 
 ## Set the required Environment Variables
 
-Export the environment variables obtained in the Getting Started section.
+Export the environment variables obtained in the previous section.
 ```
 export AWS_ACCESS_KEY_ID=<AWS account access key>
 export AWS_SECRET_ACCESS_KEY=<AWS account secret key>
@@ -26,20 +26,25 @@ export AWS_DEFAULT_REGION=<AWS region>
 
 ## Run the sample application
 
-We are now ready to run the sample applications.  For this workshop we will run the `kvsWebrtcClientMasterGstSample`.
+We are now ready to run the sample applications.  For this workshop we will run the `kvsWebRTCClientMaster`.
 
 ```bash
-./kvsWebrtcClientMasterGstSample TestChannel
+cd amazon-kinesis-video-streams-webrtc-sdk-c/samples/
 ```
 
+```bash
+./kvsWebRTCClientMaster TestChannel
+```
+
+If you do not specify a Signaling Channel (in this case `TestChannel`), the sample will create a channel for you named `ScaryTestChannel`.
 
 If you see text that looks like below, then you are ready to stream video.
 
 
 ```bash
-[KVS GStreamer Master] Signaling client created successfully
-[KVS GStreamer Master] Signaling client connection to socket established
-[KVS Gstreamer Master] Beginning streaming...check the stream over channel TestChannel
+[KVS Master] Signaling client created successfully
+[KVS Master] Signaling client connection to socket established
+[KVS Master] Beginning streaming...check the stream over channel TestChannel
 ```
 
 ## Stream video using the AWS Management Console

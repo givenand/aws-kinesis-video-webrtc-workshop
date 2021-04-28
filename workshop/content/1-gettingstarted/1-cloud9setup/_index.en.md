@@ -44,6 +44,12 @@ If the default VPC does not exist, create the VPC and subnet as follows
 [VPC settings for AWS Cloud9 Development Environments](https://docs.aws.amazon.com/ja_jp/cloud9/latest/user-guide/vpc-settings.html).
 {{% /notice %}}
 
+-----
+
+At the bottom of the screen, you can see `Admin:~/environment $`, which is the Cloud9 (EC2) terminal.
+
+
+![Cloud9 Setup](/images/1-1-b-terminal.ja.png)
 
 ## Disk Space Expansion
 
@@ -73,13 +79,5 @@ In the result of the command, make sure that `/` is 20GB as follows.
 Filesystem      Size  Used Avail Use% Mounted on
 /dev/xvda1       20G  8.3G   12G  43% /
 ```
-
------
-
-At the bottom of the screen, you can see `Admin:~/environment $`, which is the Cloud9 (EC2) terminal.
-
-
-![Cloud9 Setup](/images/1-1-b-terminal.ja.png)
-
 
 You just set up a Cloud9 environment. Next, we will build the sample applications.

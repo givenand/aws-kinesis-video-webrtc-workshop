@@ -1,19 +1,19 @@
 +++
-title = "Using a Raspberry Pi 4"
+title = "Using a Raspberry Pi"
 chapter = true
 weight = 2
 +++
 
-The following steps assume that you have successfully installed the latest version of the Raspbian OS, have connected your Raspberry Pi to a network that is available to you, and that you are able to remotely access your Raspberry Pi either via SSH or VNC.
+The following steps assume that you have successfully installed the latest version of the Raspbian OS, have connected your Raspberry Pi to a network that is available to you, and that you are able to remotely access your Raspberry Pi either via SSH or VNC or to a local display.
 
 The following diagram illustrates how you will interact with your device as well as with AWS Cloud resources.
 ![Raspberry Pi Overview](/images/RaspberryPiOverview.png)
 
 ## Hardware BOM
 
-This portion of the workshop was tested around the use of the Raspberry Pi 4. You can acquire your own hardware either directly through the [Raspberry Pi website](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/), or you can purchase a starter kit from [Amazon.com](https://www.amazon.com/CanaKit-Raspberry-4GB-Starter-Kit/dp/B07V5JTMV9/ref=sr_1_5?dchild=1&keywords=raspberry+pi+v4&qid=1617645178&sr=8-5).
+This portion of the workshop was tested around the use of the Raspberry Pi 3. You can acquire your own hardware either directly through the [Raspberry Pi website](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/), or you can purchase a starter kit from [Amazon.com](https://www.amazon.com/CanaKit-Raspberry-4GB-Starter-Kit/dp/B07V5JTMV9/ref=sr_1_5?dchild=1&keywords=raspberry+pi+v4&qid=1617645178&sr=8-5).
 
-There are a wide array of Camera modules available today for the Raspberry Pi. For this workshop, we have tested the [Camera Module V2](https://www.raspberrypi.org/products/camera-module-v2/), although the instructions provided here should work with any Raspberry Pi CSI port ribbon cable camera module.
+There are a wide array of Camera modules available today for the Raspberry Pi. For this workshop, we have tested the [Camera Module V2](https://www.raspberrypi.org/products/camera-module-v2/) and a standard USB webcam; although the instructions provided here should work with any Raspberry Pi CSI port ribbon cable camera module.
 
 ## Raspberry Pi Setup
 
