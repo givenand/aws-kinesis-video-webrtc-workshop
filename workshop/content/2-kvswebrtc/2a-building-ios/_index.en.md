@@ -51,11 +51,14 @@ pod install
 
 7. To build and run, click the play button on the XCode menu. 
 
+Note: This sample will only work if you have a physical iOS device connected via a lightening cable.
+
 ## Run the iOS Sample Application
 
 Building the iOS sample application installs the AWSKinesisVideoWebRTCDemoApp on your iOS device. Using this app, you can verify live audio/video streaming between mobile, web and IoT device clients (camera). The procedure below describes some of these scenarios.
 
 Complete the following steps:
 
-    On your iOS device, open AWSKinesisVideoWebRTCDemoApp and login using the AWS user credentials from Set Up an AWS Account and Create an Administrator. (Note: Cognito settings can be tuned through your Cognito User Pool in the AWS management Console)
-    On successful sign-in, the channel configuration view is displayed where the channel-name, client-id (optional) and region-name have to be configured.
+On your iOS device, open AWSKinesisVideoWebRTCDemoApp and login using the AWS user credentials from Set Up an AWS Account and Create an Administrator. (Note: Cognito settings can be tuned through your Cognito User Pool in the AWS management Console)
+
+On successful sign-in, the channel configuration view is displayed where the channel-name, client-id (optional) and region-name have to be configured.

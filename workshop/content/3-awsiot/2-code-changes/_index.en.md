@@ -20,7 +20,7 @@ PCHAR pAccessKey, pSecretKey, pSessionToken, pLogLevel;
 ```
 With
 ```
-PCHAR pCredentialsProviderEndpoint, pCertPath, pPrivateKeyPath, pCaCertPath, pIoTRoleAlias, pLogLevel;
+PCHAR pCredentialsProviderEndpoint, pCertPath, pPrivateKeyPath, pCaCertPath, pIoTRoleAlias, pLogLevel, pSessionToken;
 ```
 
 ### Then
@@ -60,10 +60,31 @@ cd amazon-kinesis-video-streams-webrtc-sdk-c/build
 make
 ```
 
+You should see the following if you did not make any errors in the code after making the application
+
+![Success](/images/success-build.png)
+
 ## Run the sample application
 
 All of the AWS IoT configuration is made available to the Sample applications via environment variables. Set these variables and then run the `kvsWebrtcClientMasterGstSample` application.
 
 ```
-$HOME/run-kvs-webrtc.sh
+. run-kvs-webrtc.sh
 ```
+
+You should see this output:
+
+![Success](/images/success-stream.png)
+
+## View the output
+
+Now you should be able to view the output on the [KVS WebRTC Test Page](https://awslabs.github.io/amazon-kinesis-video-streams-webrtc-sdk-js/examples/index.html)
+
+You will need to enter the following to view the video which should be output to the screen in the run-kvs-webrtc.sh script:
+
++ Access Key ID 
++ Secret Access Key
++ Session Token
++ Channel Name
+
+Click #Start Viewer#

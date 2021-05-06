@@ -45,6 +45,9 @@ make
 
 Setup gstreamer on your Cloud9 Instance
 
+First install Java and set the path.
+
+
 ```
 sudo apt-get install -y openjdk-8-jdk
 sudo apt-get install -y default-jdk

@@ -1,5 +1,5 @@
 +++
-title = "AWS IoT"
+title = "Connect with AWS IoT"
 date = 2021-03-30T08:47:41-04:00
 weight = 3
 chapter = true
